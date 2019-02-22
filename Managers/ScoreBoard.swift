@@ -17,6 +17,12 @@ class ScoreBoard {
     public static var BetLabel:SKLabelNode = SKLabelNode(text: "99")
     public static var UserLabel:SKLabelNode = SKLabelNode(text: "")
     public static var WinLabel:SKLabelNode = SKLabelNode(text: "999")
+    public static var BetOneLabel:SKLabelNode = SKLabelNode(text: "Bet One")
+    public static var BetMaxLabel:SKLabelNode = SKLabelNode(text: "Bet Max")
+    public static var QuitLabel:SKLabelNode = SKLabelNode(text: "Quit")
+    public static var ResetLabel:SKLabelNode = SKLabelNode(text: "Reset")
+    public static var PlusLabel:SKLabelNode = SKLabelNode(text: "+")
+    public static var MinusLabel:SKLabelNode = SKLabelNode(text: "-")
     
     
     // public static variables

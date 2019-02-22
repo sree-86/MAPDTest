@@ -84,8 +84,95 @@ class GameScene: SKScene {
         
         addChild(ScoreBoard.UserLabel)
         
+        ScoreBoard.BetOneLabel.position.x = -180
+        ScoreBoard.BetOneLabel.position.y = -280
+        
+        ScoreBoard.BetOneLabel.fontColor = UIColor.yellow
+        ScoreBoard.BetOneLabel.fontSize = 40.0
+        ScoreBoard.BetOneLabel.zPosition = 3
+        ScoreBoard.BetOneLabel.fontName = "Arial Bold"
+        
+        
+        addChild(ScoreBoard.BetOneLabel)
+        
+        ScoreBoard.BetMaxLabel.position.x = 180
+        ScoreBoard.BetMaxLabel.position.y = -280
+        
+        ScoreBoard.BetMaxLabel.fontColor = UIColor.yellow
+        ScoreBoard.BetMaxLabel.fontSize = 40.0
+        ScoreBoard.BetMaxLabel.zPosition = 3
+        ScoreBoard.BetMaxLabel.fontName = "Arial Bold"
+        
+        
+        addChild(ScoreBoard.BetMaxLabel)
+        
+        ScoreBoard.QuitLabel.position.x = 180
+        ScoreBoard.QuitLabel.position.y = -340
+        
+        ScoreBoard.QuitLabel.fontColor = UIColor.yellow
+        ScoreBoard.QuitLabel.fontSize = 40.0
+        ScoreBoard.QuitLabel.zPosition = 3
+        ScoreBoard.QuitLabel.fontName = "Arial Bold"
+        
+        
+        addChild(ScoreBoard.QuitLabel)
+        
+        ScoreBoard.ResetLabel.position.x = -180
+        ScoreBoard.ResetLabel.position.y = -340
+        
+        ScoreBoard.ResetLabel.fontColor = UIColor.yellow
+        ScoreBoard.ResetLabel.fontSize = 40.0
+        ScoreBoard.ResetLabel.zPosition = 3
+        ScoreBoard.ResetLabel.fontName = "Arial Bold"
+        
+        
+        addChild(ScoreBoard.ResetLabel)
+        
+        ScoreBoard.PlusLabel.position.x = -20
+        ScoreBoard.PlusLabel.position.y = -280
+        
+        ScoreBoard.PlusLabel.fontColor = UIColor.yellow
+        ScoreBoard.PlusLabel.fontSize = 40.0
+        ScoreBoard.PlusLabel.zPosition = 3
+        ScoreBoard.PlusLabel.fontName = "Arial Bold"
+        
+        
+        addChild(ScoreBoard.PlusLabel)
+        
+        ScoreBoard.MinusLabel.position.x = 20
+        ScoreBoard.MinusLabel.position.y = -280
+        
+        ScoreBoard.MinusLabel.fontColor = UIColor.yellow
+        ScoreBoard.MinusLabel.fontSize = 40.0
+        ScoreBoard.MinusLabel.zPosition = 3
+        ScoreBoard.MinusLabel.fontName = "Arial Bold"
+        
+        
+        addChild(ScoreBoard.MinusLabel)
        
         }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+            let location = touch.location(in: self)
+            let touchedNode = atPoint(location)
+            if touchedNode.name == "Bet One" {
+                // Call the function here.
+            }
+            
+            else if touchedNode.name == "Bet Max" {
+                // Call the function here.
+            }
+            
+            else if touchedNode.name == "Quit" {
+                // Call the function here.
+            }
+            
+            else if touchedNode.name == "Reset" {
+                // Call the function here.
+            }
+        }
+    }
     /*
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let label = self.label {

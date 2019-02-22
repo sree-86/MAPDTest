@@ -159,7 +159,6 @@
 				30E4EA3C221F756500E50292 /* GameObject.swift */,
 				30E4EA3E221F764600E50292 /* GameProtocol.swift */,
 				30E4EA40221F7DD700E50292 /* spinhandle.swift */,
-				30E4EA45221F81C500E50292 /* ScoreBoard.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -167,6 +166,7 @@
 		30E4EA44221F81A800E50292 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				30E4EA45221F81C500E50292 /* ScoreBoard.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
