@@ -14,7 +14,7 @@ class Handle : GameObject {
     // Initializers
     init() {
         // initialize the object with an image
-        super.init(imageString: "smot", initialScale: 0.5)
+        super.init(imageString: "smot", initialScale: 0.2)
         Start()
     }
     

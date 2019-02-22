@@ -31,8 +31,58 @@ class GameScene: SKScene {
         
         // add handle to scene
         handle = Handle()
+        handle?.position.x = 300
+        handle?.position.y = 140
+        handle?.zPosition = 5
         addChild(handle!)
         
+        // Label Config and adding to the scene
+        ScoreBoard.BetLabel.position.x = 0
+        ScoreBoard.BetLabel.position.y = -202
+        
+        ScoreBoard.BetLabel.fontColor = UIColor.yellow
+        ScoreBoard.BetLabel.fontSize = 40.0
+        ScoreBoard.BetLabel.zPosition = 3
+        ScoreBoard.BetLabel.fontName = "Arial Bold"
+        ScoreBoard.Bet = 1
+        
+        
+        addChild(ScoreBoard.BetLabel)
+        
+        ScoreBoard.CreditsLabel.position.x = -180
+        ScoreBoard.CreditsLabel.position.y = -202
+        
+        ScoreBoard.CreditsLabel.fontColor = UIColor.yellow
+        ScoreBoard.CreditsLabel.fontSize = 40.0
+        ScoreBoard.CreditsLabel.zPosition = 3
+        ScoreBoard.CreditsLabel.fontName = "Arial Bold"
+        ScoreBoard.Credit = 100
+        
+        
+        addChild(ScoreBoard.CreditsLabel)
+        
+        ScoreBoard.WinLabel.position.x = 180
+        ScoreBoard.WinLabel.position.y = -202
+        
+        ScoreBoard.WinLabel.fontColor = UIColor.yellow
+        ScoreBoard.WinLabel.fontSize = 40.0
+        ScoreBoard.WinLabel.zPosition = 3
+        ScoreBoard.WinLabel.fontName = "Arial Bold"
+        ScoreBoard.Win = 0
+        
+        
+        addChild(ScoreBoard.WinLabel)
+        
+        ScoreBoard.UserLabel.position.x = 0
+        ScoreBoard.UserLabel.position.y = 280
+        
+        ScoreBoard.UserLabel.fontColor = UIColor.yellow
+        ScoreBoard.UserLabel.fontSize = 40.0
+        ScoreBoard.UserLabel.zPosition = 3
+        ScoreBoard.UserLabel.fontName = "Arial Bold"
+        
+        
+        addChild(ScoreBoard.UserLabel)
         
        
         }
