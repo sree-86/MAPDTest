@@ -17,6 +17,8 @@
 		30E4EA12221F71EB00E50292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E4EA10221F71EB00E50292 /* LaunchScreen.storyboard */; };
 		30E4EA1D221F71EB00E50292 /* MAPDTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E4EA1C221F71EB00E50292 /* MAPDTestTests.swift */; };
 		30E4EA28221F71EC00E50292 /* MAPDTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E4EA27221F71EC00E50292 /* MAPDTestUITests.swift */; };
+		30E4EA37221F733700E50292 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30E4EA35221F733600E50292 /* win.wav */; };
+		30E4EA38221F733700E50292 /* spin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30E4EA36221F733700E50292 /* spin.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		30E4EA23221F71EC00E50292 /* MAPDTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MAPDTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E4EA27221F71EC00E50292 /* MAPDTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAPDTestUITests.swift; sourceTree = "<group>"; };
 		30E4EA29221F71EC00E50292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30E4EA35221F733600E50292 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = win.wav; path = ../../../../Downloads/SlotMachine/SlotMachine/win.wav; sourceTree = "<group>"; };
+		30E4EA36221F733700E50292 /* spin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = spin.wav; path = ../../../../Downloads/SlotMachine/SlotMachine/spin.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 				30E4EA09221F71EA00E50292 /* GameViewController.swift */,
 				30E4EA0B221F71EA00E50292 /* Main.storyboard */,
 				30E4EA0E221F71EB00E50292 /* Assets.xcassets */,
+				30E4EA36221F733700E50292 /* spin.wav */,
+				30E4EA35221F733600E50292 /* win.wav */,
 				30E4EA10221F71EB00E50292 /* LaunchScreen.storyboard */,
 				30E4EA13221F71EB00E50292 /* Info.plist */,
 			);
@@ -240,7 +246,9 @@
 			files = (
 				30E4EA0D221F71EA00E50292 /* Main.storyboard in Resources */,
 				30E4EA04221F71EA00E50292 /* GameScene.sks in Resources */,
+				30E4EA38221F733700E50292 /* spin.wav in Resources */,
 				30E4EA0F221F71EB00E50292 /* Assets.xcassets in Resources */,
+				30E4EA37221F733700E50292 /* win.wav in Resources */,
 				30E4EA12221F71EB00E50292 /* LaunchScreen.storyboard in Resources */,
 				30E4EA06221F71EA00E50292 /* Actions.sks in Resources */,
 			);
