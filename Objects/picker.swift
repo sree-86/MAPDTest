@@ -1,5 +1,5 @@
 //
-//  spinhandle.swift
+//  picker.swift
 //  MAPDTest
 //
 //  Created by Sreeram Ramakrishnan on 2019-02-21.
@@ -10,11 +10,11 @@ import Foundation
 import SpriteKit
 import GameplayKit
 
-class Handle : GameObject {
+class Picker : GameObject {
     // Initializers
     init() {
         // initialize the object with an image
-        super.init(imageString: "smot", initialScale: 0.5)
+        //super.init(imageString: "", initialScale: 1.7)
         Start()
     }
     
@@ -49,3 +49,4 @@ class Handle : GameObject {
     }
     
 }
+

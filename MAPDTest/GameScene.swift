@@ -17,6 +17,7 @@ var screenHeight: CGFloat?
 class GameScene: SKScene {
     
     var background: Background?
+    var handle: Handle?
     
     
     override func didMove(to view: SKView) {
@@ -27,6 +28,10 @@ class GameScene: SKScene {
         // add background to scene
        background = Background()
         addChild(background!)
+        
+        // add handle to scene
+        handle = Handle()
+        addChild(handle!)
         
         
        
