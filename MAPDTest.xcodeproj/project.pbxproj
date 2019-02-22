@@ -24,6 +24,7 @@
 		30E4EA3F221F764600E50292 /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E4EA3E221F764600E50292 /* GameProtocol.swift */; };
 		30E4EA41221F7DD700E50292 /* spinhandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E4EA40221F7DD700E50292 /* spinhandle.swift */; };
 		30E4EA46221F81C500E50292 /* ScoreBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E4EA45221F81C500E50292 /* ScoreBoard.swift */; };
+		30E4EA48221F951900E50292 /* Textures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E4EA47221F951900E50292 /* Textures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		30E4EA3E221F764600E50292 /* GameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
 		30E4EA40221F7DD700E50292 /* spinhandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spinhandle.swift; sourceTree = "<group>"; };
 		30E4EA45221F81C500E50292 /* ScoreBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoard.swift; sourceTree = "<group>"; };
+		30E4EA47221F951900E50292 /* Textures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		30E4EA39221F749D00E50292 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				30E4EA47221F951900E50292 /* Textures.swift */,
 				30E4EA3A221F74FA00E50292 /* background.swift */,
 				30E4EA3C221F756500E50292 /* GameObject.swift */,
 				30E4EA3E221F764600E50292 /* GameProtocol.swift */,
@@ -311,6 +314,7 @@
 				30E4EA0A221F71EA00E50292 /* GameViewController.swift in Sources */,
 				30E4EA02221F71EA00E50292 /* AppDelegate.swift in Sources */,
 				30E4EA3B221F74FA00E50292 /* background.swift in Sources */,
+				30E4EA48221F951900E50292 /* Textures.swift in Sources */,
 				30E4EA3D221F756500E50292 /* GameObject.swift in Sources */,
 				30E4EA3F221F764600E50292 /* GameProtocol.swift in Sources */,
 				30E4EA46221F81C500E50292 /* ScoreBoard.swift in Sources */,

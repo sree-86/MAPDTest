@@ -43,6 +43,12 @@ class ScoreBoard {
             WinLabel.text = String(Win)
         }
     }
+    
+    public static var User:String = "" {
+        didSet {
+            UserLabel.text = String(User)
+        }
+    }
     /*
      public static var HighScore:Int = 0 {
      didSet {

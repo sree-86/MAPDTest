@@ -18,9 +18,13 @@ class GameScene: SKScene {
     
     var background: Background?
     var handle: Handle?
+    var textures: Textures?
+
     
     
     override func didMove(to view: SKView) {
+        
+        
         
         screenWidth = frame.width
         screenHeight = frame.height
@@ -35,6 +39,34 @@ class GameScene: SKScene {
         handle?.position.y = 140
         handle?.zPosition = 5
         addChild(handle!)
+        
+        // add bet one to scene
+        let betone = SKSpriteNode(imageNamed: "bet1Button")
+        betone.position = CGPoint(x: -180, y: -270)
+        betone.setScale(1.0)
+        betone.zPosition = 5
+        betone.name = "betone"
+        self.addChild(betone)
+        
+        // add bet max to scene
+        let betmax = SKSpriteNode(imageNamed: "betMaxButton")
+        betmax.position = CGPoint(x: 180, y: -270)
+        betmax.setScale(1.0)
+        betmax.zPosition = 5
+        betmax.name = "betmax"
+        self.addChild(betmax)
+        
+        // add spin to scene
+        let spin = SKSpriteNode(imageNamed: "spinButton")
+        spin.position = CGPoint(x: 0, y: -330)
+        spin.setScale(1.0)
+        spin.zPosition = 5
+        spin.name = "spin"
+        self.addChild(spin)
+        
+        // add jackpot objects to scene
+        textures = Textures()
+        addChild(textures!)
         
         // Label Config and adding to the scene
         ScoreBoard.BetLabel.position.x = 0
@@ -84,27 +116,6 @@ class GameScene: SKScene {
         
         addChild(ScoreBoard.UserLabel)
         
-        ScoreBoard.BetOneLabel.position.x = -180
-        ScoreBoard.BetOneLabel.position.y = -280
-        
-        ScoreBoard.BetOneLabel.fontColor = UIColor.yellow
-        ScoreBoard.BetOneLabel.fontSize = 40.0
-        ScoreBoard.BetOneLabel.zPosition = 3
-        ScoreBoard.BetOneLabel.fontName = "Arial Bold"
-        
-        
-        addChild(ScoreBoard.BetOneLabel)
-        
-        ScoreBoard.BetMaxLabel.position.x = 180
-        ScoreBoard.BetMaxLabel.position.y = -280
-        
-        ScoreBoard.BetMaxLabel.fontColor = UIColor.yellow
-        ScoreBoard.BetMaxLabel.fontSize = 40.0
-        ScoreBoard.BetMaxLabel.zPosition = 3
-        ScoreBoard.BetMaxLabel.fontName = "Arial Bold"
-        
-        
-        addChild(ScoreBoard.BetMaxLabel)
         
         ScoreBoard.QuitLabel.position.x = 180
         ScoreBoard.QuitLabel.position.y = -340
@@ -113,6 +124,7 @@ class GameScene: SKScene {
         ScoreBoard.QuitLabel.fontSize = 40.0
         ScoreBoard.QuitLabel.zPosition = 3
         ScoreBoard.QuitLabel.fontName = "Arial Bold"
+        ScoreBoard.QuitLabel.name = "Quit"
         
         
         addChild(ScoreBoard.QuitLabel)
@@ -124,6 +136,7 @@ class GameScene: SKScene {
         ScoreBoard.ResetLabel.fontSize = 40.0
         ScoreBoard.ResetLabel.zPosition = 3
         ScoreBoard.ResetLabel.fontName = "Arial Bold"
+        ScoreBoard.ResetLabel.name = "Reset"
         
         
         addChild(ScoreBoard.ResetLabel)
@@ -135,6 +148,7 @@ class GameScene: SKScene {
         ScoreBoard.PlusLabel.fontSize = 40.0
         ScoreBoard.PlusLabel.zPosition = 3
         ScoreBoard.PlusLabel.fontName = "Arial Bold"
+        ScoreBoard.PlusLabel.name = "PlusLabel"
         
         
         addChild(ScoreBoard.PlusLabel)
@@ -146,7 +160,7 @@ class GameScene: SKScene {
         ScoreBoard.MinusLabel.fontSize = 40.0
         ScoreBoard.MinusLabel.zPosition = 3
         ScoreBoard.MinusLabel.fontName = "Arial Bold"
-        
+        ScoreBoard.MinusLabel.name = "MinusLabel"
         
         addChild(ScoreBoard.MinusLabel)
        
@@ -156,23 +170,56 @@ class GameScene: SKScene {
         for touch in touches {
             let location = touch.location(in: self)
             let touchedNode = atPoint(location)
-            if touchedNode.name == "Bet One" {
-                // Call the function here.
-            }
             
-            else if touchedNode.name == "Bet Max" {
+            if touchedNode.name == "Quit" {
                 // Call the function here.
-            }
-            
-            else if touchedNode.name == "Quit" {
-                // Call the function here.
+                exit(0)
             }
             
             else if touchedNode.name == "Reset" {
                 // Call the function here.
+                ScoreBoard.Bet = 1
+                ScoreBoard.Credit = 100
+                ScoreBoard.Win = 0
+                ScoreBoard.User = ""
+                
             }
+                
+            else if touchedNode.name == "betone" {
+                // Call the function here.
+                ScoreBoard.Bet = 1
+            }
+                
+            else if touchedNode.name == "betmax" {
+                // Call the function here.
+                ScoreBoard.Bet = ScoreBoard.Credit
+            }
+                
+            else if touchedNode.name == "spin" {
+                // Call the function here.
+                if(ScoreBoard.Bet > 0 && ScoreBoard.Credit > 0){
+                    ScoreBoard.Credit = ScoreBoard.Credit - ScoreBoard.Bet
+                }
+            }
+            
+            else if touchedNode.name == "PlusLabel" {
+                // Call the function here.
+                if(ScoreBoard.Bet<ScoreBoard.Credit)    {
+                ScoreBoard.Bet = ScoreBoard.Bet + 1
+                }
+            }
+            
+            else if touchedNode.name == "MinusLabel" {
+                // Call the function here.
+                if(ScoreBoard.Bet>1)    {
+                    ScoreBoard.Bet = ScoreBoard.Bet - 1
+                }
+            }
+            
         }
     }
+
+    
     /*
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let label = self.label {
