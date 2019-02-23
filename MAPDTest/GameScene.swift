@@ -20,6 +20,10 @@ struct Constant {
 let screenSize = UIScreen.main.bounds
 var screenWidth: CGFloat?
 var screenHeight: CGFloat?
+var spinImage1node:SKSpriteNode!
+var spinImage2node:SKSpriteNode!
+var spinImage3node:SKSpriteNode!
+var textures = [SKTexture]()
 
 class GameScene: SKScene {
     
@@ -41,6 +45,10 @@ class GameScene: SKScene {
 
         
         /////////////////////////////////////////////
+        
+        spinImage1node = self.childNode(withName: "spinImage1") as? SKSpriteNode
+        spinImage2node = self.childNode(withName: "spinImage2") as? SKSpriteNode
+        spinImage3node = self.childNode(withName: "spinImage3") as? SKSpriteNode
         
         screenWidth = frame.width
         screenHeight = frame.height
@@ -176,11 +184,20 @@ class GameScene: SKScene {
         ScoreBoard.MinusLabel.name = "MinusLabel"
         
         addChild(ScoreBoard.MinusLabel)
+        
+        textures.append(SKTexture(imageNamed: "bar"))
+        textures.append(SKTexture(imageNamed: "cherry"))
+        textures.append(SKTexture(imageNamed: "crown"))
+        textures.append(SKTexture(imageNamed: "lemon"))
+        textures.append(SKTexture(imageNamed: "seven"))
+        textures.append(SKTexture(imageNamed: "dimond"))
        
         }
     //////////////////////////
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        
         for touch in touches {
             let location = touch.location(in: self)
             let touchedNode = atPoint(location)
@@ -213,6 +230,15 @@ class GameScene: SKScene {
                 // Call the function here.
                 self.play(sound: Constant.spin_sound)
                 
+                let rand = Int(arc4random_uniform(UInt32(textures.count)))
+                let rand2 = Int(arc4random_uniform(UInt32(textures.count)))
+                let rand3 = Int(arc4random_uniform(UInt32(textures.count)))
+                let texture = textures[rand] as SKTexture
+                let texture2 = textures[rand2] as SKTexture
+                let texture3 = textures[rand3] as SKTexture
+                spinImage1node.texture = texture
+                spinImage2node.texture = texture2
+                spinImage3node.texture = texture3
                 
                 if(ScoreBoard.Bet > 0 && ScoreBoard.Credit > 0){
                     ScoreBoard.Credit = ScoreBoard.Credit - ScoreBoard.Bet
