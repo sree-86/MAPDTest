@@ -25,6 +25,12 @@
 		30E4EA41221F7DD700E50292 /* spinhandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E4EA40221F7DD700E50292 /* spinhandle.swift */; };
 		30E4EA46221F81C500E50292 /* ScoreBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E4EA45221F81C500E50292 /* ScoreBoard.swift */; };
 		30E4EA48221F951900E50292 /* Textures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E4EA47221F951900E50292 /* Textures.swift */; };
+		30E4EA502220D23200E50292 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E4EA4F2220D23200E50292 /* Bar.swift */; };
+		30E4EA522220D27E00E50292 /* Cherry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E4EA512220D27E00E50292 /* Cherry.swift */; };
+		30E4EA542220D29C00E50292 /* Crown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E4EA532220D29C00E50292 /* Crown.swift */; };
+		30E4EA562220D2BD00E50292 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E4EA552220D2BD00E50292 /* Diamond.swift */; };
+		30E4EA582220D2E300E50292 /* Lemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E4EA572220D2E300E50292 /* Lemon.swift */; };
+		30E4EA5A2220D2F300E50292 /* Seven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E4EA592220D2F300E50292 /* Seven.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +75,12 @@
 		30E4EA40221F7DD700E50292 /* spinhandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spinhandle.swift; sourceTree = "<group>"; };
 		30E4EA45221F81C500E50292 /* ScoreBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoard.swift; sourceTree = "<group>"; };
 		30E4EA47221F951900E50292 /* Textures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textures.swift; sourceTree = "<group>"; };
+		30E4EA4F2220D23200E50292 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
+		30E4EA512220D27E00E50292 /* Cherry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cherry.swift; sourceTree = "<group>"; };
+		30E4EA532220D29C00E50292 /* Crown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crown.swift; sourceTree = "<group>"; };
+		30E4EA552220D2BD00E50292 /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
+		30E4EA572220D2E300E50292 /* Lemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lemon.swift; sourceTree = "<group>"; };
+		30E4EA592220D2F300E50292 /* Seven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seven.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +174,12 @@
 				30E4EA3C221F756500E50292 /* GameObject.swift */,
 				30E4EA3E221F764600E50292 /* GameProtocol.swift */,
 				30E4EA40221F7DD700E50292 /* spinhandle.swift */,
+				30E4EA4F2220D23200E50292 /* Bar.swift */,
+				30E4EA512220D27E00E50292 /* Cherry.swift */,
+				30E4EA532220D29C00E50292 /* Crown.swift */,
+				30E4EA552220D2BD00E50292 /* Diamond.swift */,
+				30E4EA572220D2E300E50292 /* Lemon.swift */,
+				30E4EA592220D2F300E50292 /* Seven.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -313,10 +331,16 @@
 				30E4EA41221F7DD700E50292 /* spinhandle.swift in Sources */,
 				30E4EA0A221F71EA00E50292 /* GameViewController.swift in Sources */,
 				30E4EA02221F71EA00E50292 /* AppDelegate.swift in Sources */,
+				30E4EA562220D2BD00E50292 /* Diamond.swift in Sources */,
 				30E4EA3B221F74FA00E50292 /* background.swift in Sources */,
+				30E4EA502220D23200E50292 /* Bar.swift in Sources */,
 				30E4EA48221F951900E50292 /* Textures.swift in Sources */,
+				30E4EA542220D29C00E50292 /* Crown.swift in Sources */,
+				30E4EA582220D2E300E50292 /* Lemon.swift in Sources */,
+				30E4EA522220D27E00E50292 /* Cherry.swift in Sources */,
 				30E4EA3D221F756500E50292 /* GameObject.swift in Sources */,
 				30E4EA3F221F764600E50292 /* GameProtocol.swift in Sources */,
+				30E4EA5A2220D2F300E50292 /* Seven.swift in Sources */,
 				30E4EA46221F81C500E50292 /* ScoreBoard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

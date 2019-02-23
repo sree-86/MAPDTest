@@ -9,6 +9,13 @@
 import SpriteKit
 import GameplayKit
 import UIKit
+import AVFoundation
+
+struct Constant {
+    static let win_sound : String = "win"
+    static let spin_sound : String = "spin"
+    
+}
 
 let screenSize = UIScreen.main.bounds
 var screenWidth: CGFloat?
@@ -16,24 +23,24 @@ var screenHeight: CGFloat?
 
 class GameScene: SKScene {
     
+    var player : AVAudioPlayer?
+    
     var background: Background?
     var handle: Handle?
+    
+    /*
     var bar: Textures.Bar?
     var cherry: Textures.Cherry?
     var crown: Textures.Crown?
     var diamond: Textures.Diamond?
     var lemon: Textures.Lemon?
-    var seven: Textures.Seven?
-    
-    var textures = [Textures]()
-    
-
-
+    var seven: Textures.Seven?*/
     
     
     override func didMove(to view: SKView) {
+
         
-        
+        /////////////////////////////////////////////
         
         screenWidth = frame.width
         screenHeight = frame.height
@@ -73,10 +80,7 @@ class GameScene: SKScene {
         spin.name = "spin"
         self.addChild(spin)
         
-        // add jackpot objects to scene
-        diamond = Textures.Diamond()
-        addChild(diamond!)
-        
+
         // Label Config and adding to the scene
         ScoreBoard.BetLabel.position.x = 0
         ScoreBoard.BetLabel.position.y = -202
@@ -174,6 +178,7 @@ class GameScene: SKScene {
         addChild(ScoreBoard.MinusLabel)
        
         }
+    //////////////////////////
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
@@ -206,6 +211,9 @@ class GameScene: SKScene {
                 
             else if touchedNode.name == "spin" {
                 // Call the function here.
+                self.play(sound: Constant.spin_sound)
+                
+                
                 if(ScoreBoard.Bet > 0 && ScoreBoard.Credit > 0){
                     ScoreBoard.Credit = ScoreBoard.Credit - ScoreBoard.Bet
                 }
@@ -226,6 +234,8 @@ class GameScene: SKScene {
             }
             
         }
+        
+       
     }
 
     
@@ -252,8 +262,27 @@ class GameScene: SKScene {
     }
     */
     
+
+   // let myItem = textures.randomItem()
+    
+    func play(sound name : String){
+        guard let url = Bundle.main.url(forResource: name, withExtension: "wav") else{
+            return
+        }
+        player = try? AVAudioPlayer(contentsOf: url)
+        player?.play()
+    }
+    
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
        background?.Update()
+    }
+}
+
+extension Array {
+    func randomItem() -> Element? {
+        if isEmpty { return nil }
+        let index = Int(arc4random_uniform(UInt32(self.count)))
+        return self[index]
     }
 }
