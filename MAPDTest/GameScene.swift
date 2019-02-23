@@ -18,7 +18,16 @@ class GameScene: SKScene {
     
     var background: Background?
     var handle: Handle?
-    var textures: Textures?
+    var bar: Textures.Bar?
+    var cherry: Textures.Cherry?
+    var crown: Textures.Crown?
+    var diamond: Textures.Diamond?
+    var lemon: Textures.Lemon?
+    var seven: Textures.Seven?
+    
+    var textures = [Textures]()
+    
+
 
     
     
@@ -65,8 +74,8 @@ class GameScene: SKScene {
         self.addChild(spin)
         
         // add jackpot objects to scene
-        textures = Textures()
-        addChild(textures!)
+        diamond = Textures.Diamond()
+        addChild(diamond!)
         
         // Label Config and adding to the scene
         ScoreBoard.BetLabel.position.x = 0
@@ -219,6 +228,8 @@ class GameScene: SKScene {
         }
     }
 
+    
+    
     
     /*
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
