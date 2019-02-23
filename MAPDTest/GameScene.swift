@@ -240,6 +240,16 @@ class GameScene: SKScene {
                 spinImage2node.texture = texture2
                 spinImage3node.texture = texture3
                 
+                if (spinImage1node.texture == spinImage2node.texture && spinImage2node.texture == spinImage3node.texture){
+                    self.play(sound: Constant.win_sound)
+                    ScoreBoard.User = "You Won"
+                    ScoreBoard.Credit = 100 * ScoreBoard.Credit
+                }
+                else
+                {
+                    ScoreBoard.User = "You Lose"
+                }
+                
                 if(ScoreBoard.Bet > 0 && ScoreBoard.Credit > 0){
                     ScoreBoard.Credit = ScoreBoard.Credit - ScoreBoard.Bet
                 }
